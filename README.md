@@ -82,6 +82,12 @@ If you are developing locally and the app is throwing `401 Unauthorized` when fe
 2. Paste it into your WordPress site's `wp-content/mu-plugins/` directory (create the directory if it doesn't exist).
 3. This forces WooCommerce to accept your API keys over your local HTTP connection.
 
+### 🔐 Secure Registration Endpoint (Must-Use Plugin)
+For security reasons, this app does not pass Admin Consumer Keys to the standard WooCommerce customer endpoint. Instead, we use a custom secure endpoint for registration:
+1. Copy the `wordpress-setup/wc-mobile-app.php` file from this repository.
+2. Paste it into your WordPress site's `wp-content/mu-plugins/` directory.
+3. This enables the `http://yourwebsite.com/wp-json/myapp/v1/register` public endpoint used by the app's `authService.ts`.
+
 ## 💡 Notes on Implementation
 
 - **Mock Data**: Currently, the system has fallbacks to mock data if the API is unreachable, so you can view the UI without immediately connecting to a real WordPress instance.
