@@ -1,0 +1,93 @@
+Node.js (v18.20.8) is outdated and unsupported. Please update to a newer Node.js LTS version (required: >=20.19.4)
+Go to: https://nodejs.org/en/download
+
+› Planning build
+› Preparing Pods/React-Core-React-Core_privacy » ResourceBundle-React-Core_privacy-React-Core-Info.plist
+› Preparing Pods/React-cxxreact-React-cxxreact_privacy » ResourceBundle-React-cxxreact_privacy-React-cxxreact-Info.plist
+› Preparing Pods/ExpoFileSystem-ExpoFileSystem_privacy » ResourceBundle-ExpoFileSystem_privacy-ExpoFileSystem-Info.plist
+› Preparing Pods/EXConstants-ExpoConstants_privacy » ResourceBundle-ExpoConstants_privacy-EXConstants-Info.plist
+› Preparing Pods/AsyncStorage-AsyncStorage_resources » ResourceBundle-AsyncStorage_resources-AsyncStorage-Info.plist
+› Executing react-native Pods/hermes-engine » [CP-User] [Hermes] Replace Hermes for the right configuration, if needed
+› Executing react-native Pods/ReactNativeDependencies » [CP-User] [RNDeps] Replace React Native Dependencies for the right configuration, if needed
+› Preparing expo-constants Pods/EXConstants-EXConstants » ResourceBundle-EXConstants-EXConstants-Info.plist
+› Executing react-native Pods/RCTSwiftUI » Copy generated compatibility header
+› Executing react-native Pods/hermes-engine » [CP] Copy XCFrameworks
+› Executing react-native Pods/ReactNativeDependencies » [CP] Copy XCFrameworks
+› Executing react-native Pods/React-Core-prebuilt » [CP-User] [RNDeps] Replace React Native Core for the right configuration, if needed
+› Compiling react-native Pods/RCTSwiftUIWrapper » RCTSwiftUIWrapper-dummy.m
+› Executing react-native Pods/React-Core-prebuilt » [CP] Copy XCFrameworks
+› Executing react-native Pods/React-RCTFBReactNativeSpec » [CP-User] [RN]Check FBReactNativeSpec
+› Executing @expo/log-box Pods/ExpoLogBox » Copy generated compatibility header
+› Compiling react-native Pods/RCTSwiftUIWrapper » RCTSwiftUIContainerViewWrapper.m
+› Packaging react-native Pods/RCTSwiftUIWrapper » libRCTSwiftUIWrapper.a
+› Executing wordpress-mobile-shop Pods/ReactCodegen » [CP-User] Generate Specs
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » AsyncStorageSpec-generated.mm
+› Compiling wordpress-mobile-shop Pods/ReactAppDependencyProvider » RCTAppDependencyProvider.mm
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » react-native-safe-area-context-dummy.m
+› Compiling react-native-screens Pods/RNScreens » RNSConversions.mm
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewState.cpp
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewShadowNode.cpp
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaProviderComponentView.mm
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewComponentView.mm
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewMode.m
+
+❌  (node_modules/expo-modules-core/ios/Core/Views/SwiftUI/SwiftUIHostingView.swift:45:89)
+
+  43 |    A hosting view that renders a SwiftUI view inside the UIKit view hierarchy.
+  44 |    */
+> 45 |   public final class HostingView<Props: ViewProps, ContentView: View<Props>>: ExpoView, @MainActor AnyExpoSwiftUIHostingView {
+     |                                                                                         ^ unknown attribute 'MainActor'
+  46 |     /**
+  47 |      Props object that stores all the props for this particular view.
+  48 |      It's an environment object that is observed by the content view.
+
+
+❌  (node_modules/expo-modules-core/ios/Core/Views/SwiftUI/SwiftUIVirtualView.swift:196:43)
+
+  194 | // MARK: - ViewWrapper
+  195 |
+> 196 | extension ExpoSwiftUI.SwiftUIVirtualView: @MainActor ExpoSwiftUI.ViewWrapper {
+      |                                           ^ unknown attribute 'MainActor'
+  197 |   func getWrappedView() -> Any {
+  198 |     if let wrapper = contentView as? ExpoSwiftUI.ViewWrapper {
+  199 |       return wrapper.getWrappedView()
+
+
+❌  (node_modules/expo-modules-core/ios/Core/Views/ViewDefinition.swift:121:19)
+
+  119 | }
+  120 |
+> 121 | extension UIView: @MainActor AnyArgument {
+      |                   ^ unknown attribute 'MainActor'
+  122 |   public static func getDynamicType() -> AnyDynamicType {
+  123 |     return DynamicViewType(innerType: Self.self)
+  124 |   }
+
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewManager.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewLocalData.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewEdges.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaViewEdgeMode.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaView.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaUtils.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaShadowView.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaProviderManager.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaProvider.m
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCSafeAreaContext.mm
+› Compiling react-native-safe-area-context Pods/react-native-safe-area-context » RNCOnInsetsChangeEvent.m
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » safeareacontext-generated.mm
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » rnscreens-generated.mm
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » States.cpp
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » States.cpp
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » ShadowNodes.cpp
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » ShadowNodes.cpp
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » ReactCodegen-dummy.m
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » RCTUnstableModulesRequiringMainQueueSetupProvider.mm
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » RCTThirdPartyComponentsProvider.mm
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » RCTModulesConformingToProtocolsProvider.mm
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » RCTModuleProviders.mm
+› Compiling wordpress-mobile-shop Pods/ReactCodegen » Props.cpp
+    Run script build phase '[CP-User] [Hermes] Replace Hermes for the right configuration, if needed' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'hermes-engine' from project 'Pods')
+
+› 3 error(s), and 1 warning(s)
+
+CommandError: Failed to build iOS project. "xcodebuild" exited with error code 65.
