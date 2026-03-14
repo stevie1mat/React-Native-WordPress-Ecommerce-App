@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import { AppInput } from '../../components/common/AppInput';
 import { AppButton } from '../../components/common/AppButton';
 import { useAuth } from '../../hooks/useAuth';
@@ -71,22 +71,7 @@ export const LoginScreen: React.FC<Props> = ({ navigation }) => {
                         style={styles.loginButton}
                     />
 
-                    <View style={styles.dividerContainer}>
-                        <View style={styles.dividerLine} />
-                        <Text style={styles.dividerText}>OR CONTINUE WITH</Text>
-                        <View style={styles.dividerLine} />
-                    </View>
 
-                    <View style={styles.socialContainer}>
-                        <TouchableOpacity style={styles.socialBtn}>
-                            <Image style={styles.socialIcon} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg' }} />
-                            <Text style={styles.socialBtnText}>Google</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.socialBtn}>
-                            <MaterialIcons name="apple" size={20} color={COLORS.slate700} />
-                            <Text style={styles.socialBtnText}>Apple</Text>
-                        </TouchableOpacity>
-                    </View>
                 </View>
 
                 <View style={styles.footerContainer}>
@@ -190,48 +175,7 @@ const styles = StyleSheet.create({
         shadowRadius: 8,
         elevation: 4,
     },
-    dividerContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginVertical: SPACING.xl,
-    },
-    dividerLine: {
-        flex: 1,
-        height: 1,
-        backgroundColor: COLORS.slate200,
-    },
-    dividerText: {
-        marginHorizontal: SPACING.sm,
-        fontSize: 10,
-        color: COLORS.slate500,
-        fontWeight: '600',
-    },
-    socialContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
-    socialBtn: {
-        flex: 1,
-        height: 44,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderWidth: 1,
-        borderColor: COLORS.slate200,
-        borderRadius: 8,
-        marginHorizontal: 4,
-    },
-    socialIcon: {
-        width: 18,
-        height: 18,
-        marginRight: 6,
-    },
-    socialBtnText: {
-        fontSize: FONTS.sizes.sm,
-        fontWeight: '500',
-        color: COLORS.slate700,
-        marginLeft: 4,
-    },
+
     footerContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
