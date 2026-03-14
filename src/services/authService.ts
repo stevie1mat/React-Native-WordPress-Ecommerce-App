@@ -17,6 +17,8 @@ export const authService = {
                 id: 0, // Id usually needs a generic /users/me call if needed
                 email: user_email,
                 name: user_display_name,
+                firstName: user_display_name?.split(' ')[0] || '',
+                lastName: user_display_name?.split(' ').slice(1).join(' ') || '',
                 username: username,
             };
 
