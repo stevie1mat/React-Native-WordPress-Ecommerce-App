@@ -32,7 +32,7 @@ export const authService = {
     register: async (email: string, password: string, username?: string): Promise<void> => {
         try {
             // Uses WooCommerce REST API to create a customer
-            await wooClient.post('/customers', {
+            await wooClient.post('/wp-json/wc/v3/customers', {
                 email,
                 password,
                 username: username || email.split('@')[0]
