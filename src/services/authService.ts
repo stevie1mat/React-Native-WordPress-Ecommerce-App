@@ -31,15 +31,21 @@ export const authService = {
 
     register: async (email: string, password: string, username?: string): Promise<void> => {
         try {
-            // Uses WooCommerce REST API to create a customer
-            await wooClient.post('/wp-json/wc/v3/customers', {
+            // Uses the secure custom REST API endpoint from wc-mobile-app.php
+            const response = await apiClient.post('/wp-json/myapp/v1/register', {
                 email,
                 password,
-                username: username || email.split('@')[0]
+                username: username || email.split('@')[0],
+                name: ''
             });
-        } catch (error) {
-            console.error('Registration error:', error);
-            throw new Error('Registration failed. Email might already exist.');
+
+            if (!response.data || !response.data.success) {
+                throw new Error('Registration failed on server');
+            }
+        } catch (error: any) {
+            console.error('Registration error:', error?.response?.data || error.message);
+            const message = error?.response?.data?.message || 'Registration failed. Email might already exist.';
+            throw new Error(message);
         }
     }
 };
