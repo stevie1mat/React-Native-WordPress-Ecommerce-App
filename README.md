@@ -76,6 +76,12 @@ define('JWT_AUTH_CORS_ENABLE', true);
 
 *Note: If testing on a Local environment (like Local by Flywheel) over HTTP, WooCommerce may require Basic Auth query parameters which are blocked by default for security. Ensure your local environment passes the HTTP Authorization headers.*
 
+### 🛠️ Fixing WooCommerce Localhost 401 Unauthorized Errors
+If you are developing locally and the app is throwing `401 Unauthorized` when fetching products or registering customers:
+1. Copy the `wordpress-setup/wc-local-auth-bypass.php` file included in this repository.
+2. Paste it into your WordPress site's `wp-content/mu-plugins/` directory (create the directory if it doesn't exist).
+3. This forces WooCommerce to accept your API keys over your local HTTP connection.
+
 ## 💡 Notes on Implementation
 
 - **Mock Data**: Currently, the system has fallbacks to mock data if the API is unreachable, so you can view the UI without immediately connecting to a real WordPress instance.
